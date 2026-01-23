@@ -3,12 +3,12 @@
         {{-- Hero Section --}}
         <section class="relative pt-20 pb-20 md:pt-32 md:pb-32 px-4 overflow-hidden">
             <div class="max-w-7xl mx-auto text-center relative z-10">
-                <h1 class="text-[8vw] leading-none font-heading font-black tracking-tighter mb-8 whitespace-nowrap">
+                <h1 class="text-[8vw] leading-none font-heading font-black tracking-tighter mb-8 break-words max-w-full">
                     WEB<br>
                     <span class="text-transparent stroke-black stroke-2" style="-webkit-text-stroke: 2px black; color: transparent;">APPLICATION</span><br>
                     DEVELOPER
                 </h1>
-                <p class="text-xl md:text-2xl font-sans font-medium max-w-2xl mx-auto mb-12 bg-white border-2 border-black p-4 shadow-neo inline-block rotate-1">
+                <p class="text-xl md:text-2xl font-sans font-medium max-w-2xl mx-auto mb-12 bg-white border-2 border-black p-4 shadow-neo inline-block md:rotate-1">
                     I build web applications that refuse to be ignored. Clean code, intuitive interface, and secure.
                 </p>
                 <div class="flex flex-col md:flex-row justify-center gap-6">
@@ -23,17 +23,20 @@
         </section>
 
         {{-- Marquee / Transition --}}
-        <div class="bg-black text-white py-6 overflow-hidden border-y-4 border-black rotate-[-2deg] scale-110">
-            <div class="animate-marquee whitespace-nowrap font-heading font-bold text-4xl uppercase tracking-widest">
-                Laravel • Tailwind • Vue.js • React • Design • Development • Security • Performance •
-                Laravel • Tailwind • Vue.js • React • Design • Development • Security • Performance •
+        {{-- Marquee / Transition --}}
+        <div class="relative w-full overflow-hidden py-10">
+            <div class="bg-black text-white py-6 border-y-4 border-black rotate-[-2deg] scale-110">
+                <div class="animate-marquee whitespace-nowrap font-heading font-bold text-4xl uppercase tracking-widest">
+                    Laravel • Tailwind • Vue.js • React • Design • Development • Security • Performance •
+                    Laravel • Tailwind • Vue.js • React • Design • Development • Security • Performance •
+                </div>
             </div>
         </div>
 
         {{-- Featured/Intro Section --}}
         <section class="max-w-7xl mx-auto px-4 py-12">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div class="neo-card rotate-1">
+                <div class="neo-card md:rotate-1">
                     <h2 class="text-4xl font-heading font-black mb-6">WHY ME?</h2>
                     <ul class="space-y-4 font-sans text-lg font-bold">
                         <li class="flex items-center gap-3">

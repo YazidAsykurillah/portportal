@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="overflow-x-hidden">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,7 +18,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-20 items-center">
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="{{ route('home') }}" class="text-3xl font-heading font-extrabold text-black uppercase tracking-tighter hover:text-accent transition-colors stroke-black stroke-2">
+                    <a href="{{ route('home') }}" class="text-2xl sm:text-3xl font-heading font-extrabold text-black uppercase tracking-tighter hover:text-accent transition-colors stroke-black stroke-2">
                         asykurillah<span class="text-accent">.</span>
                     </a>
                 </div>
