@@ -82,7 +82,7 @@
 
         {{-- Services Section --}}
         <section class="max-w-7xl mx-auto px-4 py-24 border-t-4 border-black">
-            <h2 class="text-6xl md:text-8xl font-heading font-black mb-8 text-center uppercase tracking-tight">
+            <h2 class="text-4xl md:text-8xl font-heading font-black mb-8 text-center uppercase tracking-tight">
                 WHAT I DO
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
@@ -92,7 +92,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 group-hover:rotate-12 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="square" stroke-linejoin="miter" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a2 2 0 012 2v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6a2 2 0 012-2h3a1 1 0 001-1V4z" />
                         </svg>
-                        <h3 class="text-4xl md:text-5xl font-heading font-black">DESIGN</h3>
+                        <h3 class="text-2xl md:text-5xl font-heading font-black">DESIGN</h3>
                     </div>
                     <ul class="space-y-4 text-xl md:text-2xl font-bold">
                         <li class="flex items-center gap-4">
@@ -116,7 +116,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 group-hover:rotate-12 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="square" stroke-linejoin="miter" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                         </svg>
-                        <h3 class="text-4xl md:text-5xl font-heading font-black">DEVELOP</h3>
+                        <h3 class="text-2xl md:text-5xl font-heading font-black break-all md:break-normal">DEVELOP</h3>
                     </div>
                     <ul class="space-y-4 text-xl md:text-2xl font-bold">
                         <li class="flex items-center gap-4">
@@ -138,7 +138,7 @@
         
         {{-- Portfolio --}}
         <section class="max-w-7xl mx-auto px-4 py-24 border-t-4 border-black">
-            <h2 class="text-6xl md:text-8xl font-heading font-black mb-24 text-center uppercase tracking-tight">
+            <h2 class="text-4xl md:text-8xl font-heading font-black mb-24 text-center uppercase tracking-tight">
                 SELECTED WORK
             </h2>
 
@@ -199,7 +199,7 @@
 
         {{-- CTA --}}
         <section class="bg-accent border-y-2 border-black py-24 text-center px-4">
-             <h2 class="text-5xl md:text-7xl font-heading font-black mb-8 leading-tight">READY TO START<br>BUILDING?</h2>
+             <h2 class="text-4xl md:text-7xl font-heading font-black mb-8 leading-tight">READY TO START<br>BUILDING?</h2>
              <a href="{{ route('contact') }}" class="neo-btn text-2xl px-12 py-4 bg-white text-black hover:bg-black hover:text-white">Let's Talk</a>
         </section>
     </div>
