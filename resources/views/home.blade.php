@@ -1,34 +1,67 @@
 <x-layout>
-    <div class="relative bg-white overflow-hidden">
-        <div class="max-w-7xl mx-auto">
-            <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
-                <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-                    <div class="sm:text-center lg:text-left">
-                        <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
-                            <span class="block xl:inline">Building digital</span>
-                            <span class="block text-indigo-600 xl:inline">experiences that matter.</span>
-                        </h1>
-                        <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                            I'm a developer passionate about creating clean, secure, and user-centric web applications. Explore my work or check out my latest thoughts.
-                        </p>
-                        <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                            <div class="rounded-md shadow">
-                                <a href="{{ route('portfolio.index') }}" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg">
-                                    View Portfolio
-                                </a>
-                            </div>
-                            <div class="mt-3 sm:mt-0 sm:ml-3">
-                                <a href="{{ route('about') }}" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-indigo-700 bg-indigo-100 hover:bg-indigo-200 md:py-4 md:text-lg">
-                                    About Me
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </main>
+    <div class="space-y-24">
+        {{-- Hero Section --}}
+        <section class="relative pt-20 pb-20 md:pt-32 md:pb-32 px-4 overflow-hidden">
+            <div class="max-w-7xl mx-auto text-center relative z-10">
+                <h1 class="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-heading font-black tracking-tighter leading-none mb-8">
+                    DIGITAL<br>
+                    <span class="text-transparent stroke-black stroke-2" style="-webkit-text-stroke: 1px black; color: transparent;">EXPERIENCE</span><br>
+                    DESIGNER
+                </h1>
+                <p class="text-xl md:text-2xl font-sans font-medium max-w-2xl mx-auto mb-12 bg-white border-2 border-black p-4 shadow-neo inline-block rotate-1">
+                    I build web applications that refuse to be ignored. Clean code, bold design, and secure architecture.
+                </p>
+                <div class="flex flex-col md:flex-row justify-center gap-6">
+                    <a href="{{ route('portfolio.index') }}" class="neo-btn text-xl w-full md:w-auto text-center">View Work</a>
+                    <a href="{{ route('about') }}" class="neo-btn-outline text-xl bg-white w-full md:w-auto text-center">More About Me</a>
+                </div>
+            </div>
+            
+            {{-- Decorative Elements --}}
+            <div class="absolute top-10 left-10 w-24 h-24 bg-accent border-2 border-black rounded-full mix-blend-multiply opacity-50 animate-bounce"></div>
+            <div class="absolute bottom-10 right-10 w-32 h-32 bg-purple-400 border-2 border-black rotate-12 shadow-neo z-0"></div>
+        </section>
+
+        {{-- Marquee / Transition --}}
+        <div class="bg-black text-white py-6 overflow-hidden border-y-4 border-black rotate-[-2deg] scale-110">
+            <div class="animate-marquee whitespace-nowrap font-heading font-bold text-4xl uppercase tracking-widest">
+                Laravel • Tailwind • Vue.js • React • Design • Development • Security • Performance •
+                Laravel • Tailwind • Vue.js • React • Design • Development • Security • Performance •
             </div>
         </div>
-        <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 bg-gray-50">
-            <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full" src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80" alt="">
-        </div>
+
+        {{-- Featured/Intro Section --}}
+        <section class="max-w-7xl mx-auto px-4 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="neo-card rotate-1">
+                    <h2 class="text-4xl font-heading font-black mb-6">WHY ME?</h2>
+                    <ul class="space-y-4 font-sans text-lg font-bold">
+                        <li class="flex items-center gap-3">
+                            <span class="w-6 h-6 bg-accent border-2 border-black flex-shrink-0"></span>
+                            Obsessive Attention to Detail
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-6 h-6 bg-purple-400 border-2 border-black flex-shrink-0"></span>
+                            Performance First Approach
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <span class="w-6 h-6 bg-blue-400 border-2 border-black flex-shrink-0"></span>
+                            Modern Tech Stack
+                        </li>
+                    </ul>
+                </div>
+                <div class="relative">
+                     <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80" 
+                          alt="Workspace" 
+                          class="w-full h-auto border-4 border-black shadow-neo-lg grayscale hover:grayscale-0 transition-all duration-500">
+                </div>
+            </div>
+        </section>
+        
+        {{-- CTA --}}
+        <section class="bg-accent border-y-2 border-black py-24 text-center px-4">
+             <h2 class="text-5xl md:text-7xl font-heading font-black mb-8 leading-tight">READY TO START<br>SOMETHING NEW?</h2>
+             <a href="{{ route('contact') }}" class="neo-btn text-2xl px-12 py-4 bg-white text-black hover:bg-black hover:text-white">Let's Talk</a>
+        </section>
     </div>
 </x-layout>

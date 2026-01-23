@@ -4,51 +4,123 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('title', 'My Portfolio')</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body { font-family: 'Inter', sans-serif; }
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Syne', 'sans-serif'],
+                    },
+                    colors: {
+                        accent: '#c4f934',
+                        black: '#1a1a1a',
+                        white: '#ffffff',
+                    },
+                    boxShadow: {
+                        'neo': '5px 5px 0px 0px #000',
+                        'neo-sm': '3px 3px 0px 0px #000',
+                        'neo-lg': '8px 8px 0px 0px #000',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer components {
+            .neo-card {
+                @apply border-2 border-black bg-white shadow-neo p-6 transition-transform duration-200 hover:-translate-y-1 hover:translate-x-1;
+            }
+            .neo-btn {
+                @apply inline-block border-2 border-black bg-black text-white px-6 py-3 font-heading font-bold uppercase tracking-wide shadow-neo transition-all hover:bg-accent hover:text-black hover:-translate-y-1 hover:translate-x-1;
+            }
+            .neo-btn-outline {
+                @apply inline-block border-2 border-black bg-transparent text-black px-6 py-3 font-heading font-bold uppercase tracking-wide shadow-neo transition-all hover:bg-black hover:text-white hover:-translate-y-1 hover:translate-x-1;
+            }
+            .neo-input {
+                @apply w-full border-2 border-black bg-white px-4 py-3 font-sans outline-none focus:shadow-neo transition-shadow placeholder:text-gray-500 bg-white text-black;
+            }
+        }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-50 text-gray-800 antialiased flex flex-col min-h-screen">
+<body class="bg-[#f0f0f0] text-black font-sans antialiased flex flex-col min-h-screen selection:bg-accent selection:text-black overflow-x-hidden">
 
-    <nav class="bg-white shadow-sm sticky top-0 z-50">
+    <nav class="bg-white border-b-2 border-black sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex">
-                    <div class="flex-shrink-0 flex items-center">
-                        <a href="{{ route('home') }}" class="text-xl font-bold text-indigo-600 tracking-tight">Portfolio.</a>
-                    </div>
-                    <div class="hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8">
-                        <a href="{{ route('home') }}" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Home</a>
-                        <a href="{{ route('about') }}" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">About</a>
-                        <a href="{{ route('portfolio.index') }}" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Work</a>
-                        <a href="{{ route('blog.index') }}" class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium">Blog</a>
-                    </div>
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="{{ route('home') }}" class="text-3xl font-heading font-extrabold text-black uppercase tracking-tighter hover:text-accent transition-colors stroke-black stroke-2">
+                        asykurillah<span class="text-accent">.</span>
+                    </a>
                 </div>
-                <div class="flex items-center">
+                
+                {{-- Desktop Menu --}}
+                <div class="hidden sm:flex sm:space-x-8">
+                    <a href="{{ route('home') }}" class="text-black hover:bg-black hover:text-white px-3 py-2 text-lg font-bold font-heading uppercase transition-all {{ request()->routeIs('home') ? 'bg-black text-white' : '' }}">Home</a>
+                    <a href="{{ route('about') }}" class="text-black hover:bg-black hover:text-white px-3 py-2 text-lg font-bold font-heading uppercase transition-all {{ request()->routeIs('about') ? 'bg-black text-white' : '' }}">About</a>
+                    <a href="{{ route('portfolio.index') }}" class="text-black hover:bg-black hover:text-white px-3 py-2 text-lg font-bold font-heading uppercase transition-all {{ request()->routeIs('portfolio.*') ? 'bg-black text-white' : '' }}">Work</a>
+                    <a href="{{ route('blog.index') }}" class="text-black hover:bg-black hover:text-white px-3 py-2 text-lg font-bold font-heading uppercase transition-all {{ request()->routeIs('blog.*') ? 'bg-black text-white' : '' }}">Blog</a>
+                </div>
+                
+                <div class="hidden sm:flex items-center space-x-4">
+                    <a href="{{ route('contact') }}" class="neo-btn text-sm! py-2! px-4!">Let's Talk</a>
                     @auth
-                        <a href="/admin" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium">Dashboard</a>
-                    @else
-                        <a href="/admin/login" class="text-gray-500 hover:text-gray-900 text-sm font-medium">Login</a>
+                        <a href="/admin" class="neo-btn-outline text-sm! py-2! px-4!">Dashboard</a>
                     @endauth
                 </div>
+
+                {{-- Mobile Menu Button --}}
+                <div class="flex items-center sm:hidden">
+                    <button type="button" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="text-black hover:text-accent focus:outline-none p-2 border-2 border-black shadow-neo-sm">
+                        <svg class="h-8 w-8" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="square" stroke-linejoin="miter" stroke-width="3" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        {{-- Mobile Menu Dropdown --}}
+        <div class="hidden sm:hidden border-t-2 border-black bg-white absolute w-full left-0 z-40 shadow-neo" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="{{ route('home') }}" class="block px-3 py-4 text-xl font-heading font-black uppercase text-black hover:bg-accent hover:pl-6 transition-all border-b-2 border-black {{ request()->routeIs('home') ? 'bg-black text-white hover:bg-black hover:text-white' : '' }}">Home</a>
+                <a href="{{ route('about') }}" class="block px-3 py-4 text-xl font-heading font-black uppercase text-black hover:bg-accent hover:pl-6 transition-all border-b-2 border-black {{ request()->routeIs('about') ? 'bg-black text-white hover:bg-black hover:text-white' : '' }}">About</a>
+                <a href="{{ route('portfolio.index') }}" class="block px-3 py-4 text-xl font-heading font-black uppercase text-black hover:bg-accent hover:pl-6 transition-all border-b-2 border-black {{ request()->routeIs('portfolio.*') ? 'bg-black text-white hover:bg-black hover:text-white' : '' }}">Work</a>
+                <a href="{{ route('blog.index') }}" class="block px-3 py-4 text-xl font-heading font-black uppercase text-black hover:bg-accent hover:pl-6 transition-all border-b-2 border-black {{ request()->routeIs('blog.*') ? 'bg-black text-white hover:bg-black hover:text-white' : '' }}">Blog</a>
+            </div>
+            <div class="pt-4 pb-4 border-t border-gray-200 px-4 space-y-3">
+                 <a href="{{ route('contact') }}" class="neo-btn w-full text-center">Let's Talk</a>
+                 @auth
+                    <a href="/admin" class="neo-btn-outline w-full text-center">Dashboard</a>
+                @endauth
             </div>
         </div>
     </nav>
 
-    <main class="flex-grow">
+    <main class="flex-grow w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         {{ $slot }}
     </main>
 
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
-            <div>
-                <span class="text-lg font-bold tracking-tight">Portfolio.</span>
-                <p class="text-gray-400 text-sm mt-1">&copy; {{ date('Y') }} All rights reserved.</p>
-            </div>
-            <div class="flex space-x-6">
-                <!-- Social Links -->
+    <footer class="bg-black text-white border-t-4 border-accent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <span class="text-4xl font-heading font-black tracking-tighter block mb-2">LET'S WORK<br>TOGETHER.</span>
+                    <p class="text-gray-400 font-sans text-sm">&copy; {{ date('Y') }} All rights reserved.</p>
+                </div>
+                <div class="flex justify-end space-x-6">
+                     <!-- Social links placeholder -->
+                     <a href="#" class="text-white hover:text-accent font-bold uppercase font-heading">Twitter</a>
+                     <a href="#" class="text-white hover:text-accent font-bold uppercase font-heading">LinkedIn</a>
+                     <a href="#" class="text-white hover:text-accent font-bold uppercase font-heading">GitHub</a>
+                </div>
             </div>
         </div>
     </footer>

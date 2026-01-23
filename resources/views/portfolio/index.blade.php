@@ -1,44 +1,45 @@
 <x-layout>
-    <div class="bg-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Portfolio</h2>
-                <p class="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
-                    Check out my latest projects.
-                </p>
-            </div>
-            <div class="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-3 lg:max-w-none">
-                @foreach($projects as $project)
-                    <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-                        @if($project->image)
-                            <div class="flex-shrink-0">
-                                <img class="h-48 w-full object-cover" src="{{ asset('storage/' . $project->image) }}" alt="">
-                            </div>
-                        @else
-                            <div class="flex-shrink-0 h-48 bg-gray-200 flex items-center justify-center">
-                                <span class="text-gray-400">No Image</span>
-                            </div>
-                        @endif
-                        <div class="flex-1 bg-white p-6 flex flex-col justify-between">
-                            <div class="flex-1">
-                                <a href="{{ route('portfolio.show', $project) }}" class="block mt-2">
-                                    <p class="text-xl font-semibold text-gray-900">
-                                        {{ $project->title }}
-                                    </p>
-                                    <p class="mt-3 text-base text-gray-500">
-                                        {{ Str::limit($project->description, 100) }}
-                                    </p>
-                                </a>
-                            </div>
-                            @can('update', $project)
-                                <div class="mt-4">
-                                    <a href="/admin/projects/{{ $project->id }}/edit" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium">Edit Project</a>
-                                </div>
-                            @endcan
+    <div class="space-y-12">
+        <header class="text-center space-y-4">
+            <h1 class="text-6xl md:text-8xl font-heading font-black tracking-tighter uppercase stroke-black stroke-2 mb-2">
+                SELECTED<br>WORK
+            </h1>
+            <p class="text-xl font-bold font-sans max-w-2xl mx-auto">
+                Things I've built, broken, and fixed again.
+            </p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            @foreach($projects as $project)
+                <div class="neo-card group relative h-full flex flex-col">
+                    @if($project->image)
+                        <div class="relative mb-6 border-2 border-black overflow-hidden h-64">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" src="{{ asset('storage/' . $project->image) }}" alt="{{ $project->title }}">
+                            <div class="absolute inset-0 bg-accent mix-blend-multiply opacity-0 group-hover:opacity-20 transition-opacity"></div>
+                        </div>
+                    @else
+                        <div class="relative mb-6 border-2 border-black overflow-hidden h-64 bg-gray-100 flex items-center justify-center">
+                            <span class="font-heading font-black text-4xl text-gray-300 uppercase">NO IMAGE</span>
+                        </div>
+                    @endif
+                    
+                    <div class="flex-1 flex flex-col">
+                        <h3 class="text-3xl font-heading font-black uppercase mb-3 leading-none group-hover:text-accent transition-colors">
+                            <a href="{{ route('portfolio.show', $project) }}" class="before:absolute before:inset-0">
+                                {{ $project->title }}
+                            </a>
+                        </h3>
+                        <p class="font-sans font-medium text-gray-600 mb-6 flex-grow">
+                            {{ Str::limit($project->description, 100) }}
+                        </p>
+                        
+                        <div class="flex justify-between items-end border-t-2 border-black pt-4 mt-auto">
+                            <span class="font-bold text-sm uppercase tracking-widest">View Case Study</span>
+                            <span class="text-2xl transform group-hover:translate-x-2 transition-transform">-></span>
                         </div>
                     </div>
-                @endforeach
-            </div>
+                </div>
+            @endforeach
         </div>
     </div>
 </x-layout>

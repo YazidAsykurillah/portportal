@@ -1,34 +1,51 @@
 <x-layout>
-    <div class="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8">
-        <div class="max-w-5xl mx-auto">
-            <div class="lg:grid lg:grid-cols-12 lg:gap-8">
-                <div class="lg:col-span-8">
-                    @if($project->image)
-                        <img class="w-full rounded-lg shadow-lg mb-8" src="{{ asset('storage/' . $project->image) }}" alt="{{ $project->title }}">
-                    @endif
-                    <h1 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">{{ $project->title }}</h1>
-                    <div class="mt-6 prose prose-indigo prose-lg text-gray-500 mx-auto">
-                        {{ $project->description }}
+    <div class="max-w-7xl mx-auto space-y-12">
+        <div class="border-b-4 border-black pb-8">
+            <a href="{{ route('portfolio.index') }}" class="font-bold text-xl hover:text-accent mb-4 inline-block"><- BACK TO PROJECTS</a>
+            <h1 class="text-5xl md:text-7xl font-heading font-black tracking-tighter uppercase leading-none">
+                {{ $project->title }}
+            </h1>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <div class="lg:col-span-8 space-y-8">
+                @if($project->image)
+                    <div class="border-4 border-black shadow-neo-lg bg-black">
+                        <img class="w-full h-auto block" src="{{ asset('storage/' . $project->image) }}" alt="{{ $project->title }}">
                     </div>
-                    @if($project->url)
-                        <div class="mt-8">
-                            <a href="{{ $project->url }}" target="_blank" class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700">
-                                Visit Project
-                            </a>
-                        </div>
-                    @endif
+                @endif
+                
+                <div class="prose prose-xl prose-headings:font-heading prose-headings:font-bold prose-headings:uppercase max-w-none font-sans">
+                    {{ $project->description }}
                 </div>
-                <div class="lg:col-span-4 mt-8 lg:mt-0">
-                    <div class="bg-gray-50 rounded-lg p-6">
-                        @can('update', $project)
-                            <a href="/admin/projects/{{ $project->id }}/edit" class="block w-full text-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 mb-4">
-                                Edit Project
-                            </a>
-                        @endcan
-                        <a href="{{ route('portfolio.index') }}" class="block w-full text-center text-indigo-600 hover:text-indigo-900 font-medium">
-                            &larr; Back to Portfolio
+            </div>
+
+            <div class="lg:col-span-4 space-y-8">
+                <div class="neo-card sticky top-24">
+                    <h3 class="text-2xl font-heading font-black uppercase mb-6 border-b-2 border-black pb-2">Project Details</h3>
+                    
+                   <dl class="space-y-4 font-sans text-lg mb-8">
+                        <div>
+                            <dt class="font-bold uppercase text-sm text-gray-500">Client</dt>
+                            <dd class="font-bold">Confidential / Self-Initiated</dd>
+                        </div>
+                        <div>
+                            <dt class="font-bold uppercase text-sm text-gray-500">My Role</dt>
+                            <dd class="font-bold">Design & Development</dd>
+                        </div>
+                   </dl>
+
+                    @if($project->url)
+                        <a href="{{ $project->url }}" target="_blank" class="neo-btn w-full text-center mb-4">
+                            VISIT LIVE SITE ->
                         </a>
-                    </div>
+                    @endif
+                    
+                    @can('update', $project)
+                        <a href="/admin/projects/{{ $project->id }}/edit" class="neo-btn-outline w-full text-center text-sm">
+                            Edit Project
+                        </a>
+                    @endcan
                 </div>
             </div>
         </div>

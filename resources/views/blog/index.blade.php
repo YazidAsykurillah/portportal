@@ -1,56 +1,42 @@
 <x-layout>
-    <div class="bg-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <h2 class="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Latest Updates</h2>
-                <p class="mt-3 max-w-2xl mx-auto text-xl text-gray-500 sm:mt-4">
-                    Insights and stories.
-                </p>
-            </div>
-            <div class="mt-12 grid gap-5 max-w-lg mx-auto lg:grid-cols-2 lg:max-w-none">
-                @foreach($posts as $post)
-                    <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-                        <div class="flex-1 bg-white p-6 flex flex-col justify-between">
-                            <div class="flex-1">
-                                <p class="text-sm font-medium text-indigo-600">
-                                    Article
-                                </p>
-                                <a href="{{ route('blog.show', $post) }}" class="block mt-2">
-                                    <p class="text-xl font-semibold text-gray-900">
-                                        {{ $post->title }}
-                                    </p>
-                                    <p class="mt-3 text-base text-gray-500">
-                                        {{ Str::limit(strip_tags($post->content), 100) }}
-                                    </p>
+    <div class="max-w-5xl mx-auto space-y-12">
+        <header class="text-center border-b-4 border-black pb-12">
+            <h1 class="text-4xl md:text-8xl font-heading font-black tracking-tighter uppercase mb-4">
+                THOUGHTS<br>& WORDS
+            </h1>
+        </header>
+
+        <div class="space-y-8">
+            @foreach($posts as $post)
+                <article class="neo-card group relative hover:bg-black hover:text-white transition-colors duration-300">
+                    <div class="flex flex-col md:flex-row gap-6 md:items-center">
+                        <div class="md:w-1/4 shrink-0">
+                            <time datetime="{{ $post->published_at }}" class="block font-heading font-bold text-4xl leading-none md:text-right group-hover:text-accent">
+                                {{ \Carbon\Carbon::parse($post->published_at)->format('d') }}<br>
+                                <span class="text-lg uppercase text-gray-400 group-hover:text-gray-300">
+                                    {{ \Carbon\Carbon::parse($post->published_at)->format('M Y') }}
+                                </span>
+                            </time>
+                        </div>
+                        
+                        <div class="md:w-3/4 space-y-3">
+                            <h2 class="text-3xl font-heading font-bold leading-tight uppercase group-hover:text-accent">
+                                <a href="{{ route('blog.show', $post) }}" class="before:absolute before:inset-0">
+                                    {{ $post->title }}
                                 </a>
+                            </h2>
+                            <p class="font-sans font-medium text-gray-600 group-hover:text-gray-300 text-lg">
+                                {{ Str::limit(strip_tags($post->content), 150) }}
+                            </p>
+                            
+                            <div class="flex items-center gap-2 text-sm font-bold uppercase tracking-widest pt-2">
+                                <span class="w-2 h-2 bg-accent rounded-full inline-block"></span>
+                                {{ $post->author->name }}
                             </div>
-                            <div class="mt-6 flex items-center">
-                                <div class="flex-shrink-0">
-                                    <span class="sr-only">{{ $post->author->name }}</span>
-                                    <div class="h-10 w-10 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-700 font-bold">
-                                        {{ substr($post->author->name, 0, 1) }}
-                                    </div>
-                                </div>
-                                <div class="ml-3">
-                                    <p class="text-sm font-medium text-gray-900">
-                                        {{ $post->author->name }}
-                                    </p>
-                                    <div class="flex space-x-1 text-sm text-gray-500">
-                                        <time datetime="{{ $post->published_at }}">
-                                            {{ \Carbon\Carbon::parse($post->published_at)->format('M d, Y') }}
-                                        </time>
-                                    </div>
-                                </div>
-                            </div>
-                            @can('update', $post)
-                                <div class="mt-4 border-t pt-4">
-                                    <a href="/admin/posts/{{ $post->id }}/edit" class="text-indigo-600 hover:text-indigo-900 text-sm font-medium">Edit Post</a>
-                                </div>
-                            @endcan
                         </div>
                     </div>
-                @endforeach
-            </div>
+                </article>
+            @endforeach
         </div>
     </div>
 </x-layout>

@@ -10,6 +10,7 @@ Route::post('/contact', [ContactController::class, 'store'])->name('contact.stor
 
 Route::get('/', [SiteController::class, 'home'])->name('home');
 Route::get('/about', [SiteController::class, 'about'])->name('about');
+Route::get('/contact', [SiteController::class, 'contact'])->name('contact');
 
 Route::get('/portfolio', [PortfolioController::class, 'index'])->name('portfolio.index');
 Route::get('/portfolio/{project:slug}', [PortfolioController::class, 'show'])->name('portfolio.show');
