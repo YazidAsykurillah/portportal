@@ -1,4 +1,4 @@
-<x-layout title="Home">
+<x-layout :title="$title" :meta-description="$meta_description ?? null" :og-title="$og_title ?? null" :og-description="$og_description ?? null" :og-image="$og_image ?? null">
     <div class="space-y-24">
         {{-- Hero Section --}}
         <section class="relative pt-20 pb-20 md:pt-32 md:pb-32 px-4 overflow-hidden">

@@ -1,4 +1,4 @@
-<x-layout title="Contact">
+<x-layout :title="$title" :meta-description="$meta_description ?? null" :og-title="$og_title ?? null" :og-description="$og_description ?? null" :og-image="$og_image ?? null">
     <div class="max-w-4xl mx-auto space-y-16">
         
         {{-- Intro --}}

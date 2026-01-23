@@ -1,4 +1,4 @@
-<x-layout title="{{ $project->title }}">
+<x-layout :title="$title" :meta-description="$meta_description ?? null" :og-title="$og_title ?? null" :og-description="$og_description ?? null" :og-image="$og_image ?? null">
     <div class="max-w-7xl mx-auto space-y-12">
         <div class="border-b-4 border-black pb-8">
             <a href="{{ route('portfolio.index') }}" class="font-bold text-xl hover:text-accent mb-4 inline-block"><- BACK TO PROJECTS</a>

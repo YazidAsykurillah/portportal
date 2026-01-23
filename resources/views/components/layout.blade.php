@@ -4,6 +4,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ $title ?? 'My Portfolio' }}</title>
+    <meta name="description" content="{{ $metaDescription ?? 'A showcase of my work and thoughts on web development.' }}">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ $canonicalUrl ?? url()->current() }}">
+    <meta property="og:title" content="{{ $ogTitle ?? $title ?? 'My Portfolio' }}">
+    <meta property="og:description" content="{{ $ogDescription ?? $metaDescription ?? 'A showcase of my work and thoughts on web development.' }}">
+    <meta property="og:image" content="{{ $ogImage ?? asset('og-image.jpg') }}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ $canonicalUrl ?? url()->current() }}">
+    <meta property="twitter:title" content="{{ $ogTitle ?? $title ?? 'My Portfolio' }}">
+    <meta property="twitter:description" content="{{ $ogDescription ?? $metaDescription ?? 'A showcase of my work and thoughts on web development.' }}">
+    <meta property="twitter:image" content="{{ $ogImage ?? asset('og-image.jpg') }}">
+
+    <link rel="canonical" href="{{ $canonicalUrl ?? url()->current() }}">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

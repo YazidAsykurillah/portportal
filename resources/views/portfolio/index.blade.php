@@ -1,4 +1,4 @@
-<x-layout title="Portfolio">
+<x-layout :title="$title" :meta-description="$meta_description ?? null" :og-title="$og_title ?? null" :og-description="$og_description ?? null" :og-image="$og_image ?? null">
     <div class="space-y-12">
         <header class="text-center space-y-4">
             <h1 class="text-4xl md:text-7xl font-heading font-black tracking-tighter uppercase">

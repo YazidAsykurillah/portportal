@@ -1,4 +1,4 @@
-<x-layout title="{{ $post->title }}">
+<x-layout :title="$title" :meta-description="$meta_description ?? null" :og-title="$og_title ?? null" :og-description="$og_description ?? null" :og-image="$og_image ?? null">
     <div class="max-w-4xl mx-auto relative">
         {{-- Decorative Header --}}
         <div class="bg-accent border-4 border-black p-8 md:p-12 mb-12 text-center relative z-10 shadow-neo">
