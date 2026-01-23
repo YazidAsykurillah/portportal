@@ -14,7 +14,7 @@
                 <div class="neo-card group relative h-full flex flex-col">
                     @if($project->image)
                         <div class="relative mb-6 border-2 border-black overflow-hidden h-64">
-                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" src="{{ asset('storage/' . $project->image) }}" alt="{{ $project->title }}">
+                            <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 md:grayscale group-hover:grayscale-0" src="{{ asset('storage/' . $project->image) }}" alt="{{ $project->title }}">
                             <div class="absolute inset-0 bg-accent mix-blend-multiply opacity-0 group-hover:opacity-20 transition-opacity"></div>
                         </div>
                     @else
