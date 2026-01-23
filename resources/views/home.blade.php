@@ -9,7 +9,8 @@
                     DEVELOPER
                 </h1>
                 <p class="text-xl md:text-2xl font-sans font-medium max-w-2xl mx-auto mb-12 bg-white border-2 border-black p-4 shadow-neo inline-block md:rotate-1">
-                    I build web applications that refuse to be ignored. Clean code, intuitive interface, and secure.
+                    <!-- I build web applications that refuse to be ignored. Clean code, intuitive interface, and secure. -->
+                    I design and build websites that attract, engage, and convert.
                 </p>
                 <div class="flex flex-col md:flex-row justify-center gap-6">
                     <a href="{{ route('portfolio.index') }}" class="neo-btn text-xl w-full md:w-auto text-center">View Work</a>
@@ -26,9 +27,13 @@
         {{-- Marquee / Transition --}}
         <div class="relative w-full overflow-hidden py-10">
             <div class="bg-black text-white py-6 border-y-4 border-black rotate-[-2deg] scale-110">
+                <!-- <div class="animate-marquee whitespace-nowrap font-heading font-bold text-4xl uppercase tracking-widest">
+                    Laravel • Tailwind • Vue.js • React • Design • Development • Security • Performance •
+                    Laravel • Tailwind • Vue.js • React • Design • Development • Security • Performance •
+                </div> -->
                 <div class="animate-marquee whitespace-nowrap font-heading font-bold text-4xl uppercase tracking-widest">
-                    Laravel • Tailwind • Vue.js • React • Design • Development • Security • Performance •
-                    Laravel • Tailwind • Vue.js • React • Design • Development • Security • Performance •
+                    Web Design • Web Development • Web Design • Web Development • Web Design • Web Development •
+                    
                 </div>
             </div>
         </div>

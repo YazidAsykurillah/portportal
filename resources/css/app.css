@@ -16,6 +16,13 @@
     
     --shadow-neo: 5px 5px 0px 0px #000;
     --shadow-neo-sm: 3px 3px 0px 0px #000;
+
+    --animate-marquee: marquee 20s linear infinite;
+    
+    @keyframes marquee {
+        from { transform: translateX(0); }
+        to { transform: translateX(-100%); }
+    }
 }
 
 @layer components {
