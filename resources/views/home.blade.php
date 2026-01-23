@@ -92,7 +92,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 group-hover:rotate-12 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="square" stroke-linejoin="miter" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a2 2 0 012 2v6a2 2 0 01-2 2H9a2 2 0 01-2-2v-6a2 2 0 012-2h3a1 1 0 001-1V4z" />
                         </svg>
-                        <h3 class="text-2xl md:text-5xl font-heading font-black">DESIGN</h3>
+                        <h3 class="text-2xl md:text-2xl font-heading font-black">DESIGN</h3>
                     </div>
                     <ul class="space-y-4 text-xl md:text-2xl font-bold">
                         <li class="flex items-center gap-4">
@@ -116,7 +116,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 group-hover:rotate-12 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
                             <path stroke-linecap="square" stroke-linejoin="miter" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                         </svg>
-                        <h3 class="text-2xl md:text-5xl font-heading font-black break-all md:break-normal">DEVELOP</h3>
+                        <h3 class="text-2xl md:text-2xl font-heading font-black break-all md:break-normal">DEVELOP</h3>
                     </div>
                     <ul class="space-y-4 text-xl md:text-2xl font-bold">
                         <li class="flex items-center gap-4">
