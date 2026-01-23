@@ -1,7 +1,7 @@
 <x-layout title="Blog">
     <div class="max-w-5xl mx-auto space-y-12">
         <header class="text-center border-b-4 border-black pb-12">
-            <h1 class="text-4xl md:text-8xl font-heading font-black tracking-tighter uppercase mb-4">
+            <h1 class="text-4xl md:text-7xl font-heading font-black tracking-tighter uppercase">
                 THOUGHTS<br>& WORDS
             </h1>
         </header>

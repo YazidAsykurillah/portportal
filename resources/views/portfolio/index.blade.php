@@ -1,7 +1,7 @@
 <x-layout title="Portfolio">
     <div class="space-y-12">
         <header class="text-center space-y-4">
-            <h1 class="text-6xl md:text-8xl font-heading font-black tracking-tighter uppercase stroke-black stroke-2 mb-2">
+            <h1 class="text-4xl md:text-7xl font-heading font-black tracking-tighter uppercase">
                 SELECTED<br>WORK
             </h1>
             <p class="text-xl font-bold font-sans max-w-2xl mx-auto">
