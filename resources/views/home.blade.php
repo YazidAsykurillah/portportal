@@ -20,7 +20,7 @@
             
             {{-- Decorative Elements --}}
             <div class="absolute top-10 left-10 w-24 h-24 bg-accent border-2 border-black rounded-full mix-blend-multiply opacity-50 animate-bounce"></div>
-            <div class="relative mx-auto mt-12 md:mt-0 md:absolute md:bottom-10 md:right-10 w-32 h-32 bg-white border-2 border-black md:rotate-12 shadow-neo z-0">
+            <div class="relative mx-auto mt-12 md:mt-0 md:absolute md:bottom-10 md:right-10 w-32 h-32 bg-white border-2 border-black md:rotate-12 md:hover:rotate-0 transition-transform duration-500 shadow-neo z-0">
                  <img src="{{ asset('images/profile_placeholder.png') }}" 
                       alt="Profile" 
                       class="w-full h-full object-cover md:grayscale md:hover:grayscale-0 transition-all duration-500">
@@ -28,17 +28,17 @@
         </section>
 
         {{-- Marquee / Transition --}}
-        <div class="relative w-screen left-1/2 -ml-[50vw] overflow-hidden bg-accent border-y-8 border-black transform -skew-y-3" style="padding-top: 14rem; padding-bottom: 14rem;">
+        <div class="relative w-screen left-1/2 -ml-[50vw] overflow-hidden bg-accent border-y-8 border-black transform -skew-y-3 py-20 md:py-56">
             <!-- Row 1: Left to Right -->
             <div class="absolute top-0 left-0 w-full rotate-2 opacity-50">
-                 <div class="whitespace-nowrap font-heading font-black text-[10rem] text-black leading-none opacity-20 select-none">
+                 <div class="whitespace-nowrap font-heading font-black text-[5rem] md:text-[10rem] text-black leading-none opacity-20 select-none">
                     DESIGN
                  </div>
             </div>
 
             <!-- Row 2: Right to Left (Main) -->
-            <div class="relative z-10 bg-black py-8 border-y-4 border-white overflow-hidden transform rotate-1 scale-110 shadow-neo-lg group">
-                <div class="animate-marquee group-hover:[animation-play-state:paused] whitespace-nowrap font-heading font-black text-6xl md:text-8xl text-white uppercase tracking-tighter" style="width: max-content; animation-duration: 180s;">
+            <div class="relative z-10 bg-black py-4 md:py-8 border-y-4 border-white overflow-hidden transform rotate-1 scale-110 shadow-neo-lg group">
+                <div class="animate-marquee group-hover:[animation-play-state:paused] whitespace-nowrap font-heading font-black text-4xl md:text-8xl text-white uppercase tracking-tighter" style="width: max-content; animation-duration: 180s;">
                     Web Design • Web Development • UI/UX • Branding • SEO • 
                     Web Design • Web Development • UI/UX • Branding • SEO •
                 </div>
@@ -46,7 +46,7 @@
 
             <!-- Row 3: Decoration -->
              <div class="absolute bottom-0 left-0 w-full -rotate-1 opacity-50 z-0">
-                 <div class="whitespace-nowrap font-heading font-black text-[10rem] text-black leading-none opacity-20 select-none">
+                 <div class="whitespace-nowrap font-heading font-black text-[5rem] md:text-[10rem] text-black leading-none opacity-20 select-none">
                     DEVELOPMENT
                  </div>
             </div>
