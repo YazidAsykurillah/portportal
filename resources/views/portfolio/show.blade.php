@@ -2,7 +2,7 @@
     <div class="max-w-7xl mx-auto space-y-12">
         <div class="border-b-4 border-black pb-8">
             <a href="{{ route('portfolio.index') }}" class="font-bold text-xl hover:text-accent mb-4 inline-block"><- BACK TO PROJECTS</a>
-            <h1 class="text-5xl md:text-7xl font-heading font-black tracking-tighter uppercase leading-none">
+            <h1 class="text-4xl md:text-7xl font-heading font-black tracking-tighter uppercase leading-none">
                 {{ $project->title }}
             </h1>
         </div>
