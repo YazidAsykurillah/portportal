@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title="Contact">
     <div class="max-w-4xl mx-auto space-y-16">
         
         {{-- Intro --}}

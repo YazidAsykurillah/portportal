@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title="Portfolio">
     <div class="space-y-12">
         <header class="text-center space-y-4">
             <h1 class="text-6xl md:text-8xl font-heading font-black tracking-tighter uppercase stroke-black stroke-2 mb-2">

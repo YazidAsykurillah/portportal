@@ -1,15 +1,15 @@
-<x-layout>
+<x-layout title="Home">
     <div class="space-y-24">
         {{-- Hero Section --}}
         <section class="relative pt-20 pb-20 md:pt-32 md:pb-32 px-4 overflow-hidden">
             <div class="max-w-7xl mx-auto text-center relative z-10">
-                <h1 class="text-5xl sm:text-6xl md:text-8xl lg:text-9xl font-heading font-black tracking-tighter leading-none mb-8">
-                    DIGITAL<br>
-                    <span class="text-transparent stroke-black stroke-2" style="-webkit-text-stroke: 1px black; color: transparent;">EXPERIENCE</span><br>
-                    DESIGNER
+                <h1 class="text-[8vw] leading-none font-heading font-black tracking-tighter mb-8 whitespace-nowrap">
+                    WEB<br>
+                    <span class="text-transparent stroke-black stroke-2" style="-webkit-text-stroke: 2px black; color: transparent;">APPLICATION</span><br>
+                    DEVELOPER
                 </h1>
                 <p class="text-xl md:text-2xl font-sans font-medium max-w-2xl mx-auto mb-12 bg-white border-2 border-black p-4 shadow-neo inline-block rotate-1">
-                    I build web applications that refuse to be ignored. Clean code, bold design, and secure architecture.
+                    I build web applications that refuse to be ignored. Clean code, intuitive interface, and secure.
                 </p>
                 <div class="flex flex-col md:flex-row justify-center gap-6">
                     <a href="{{ route('portfolio.index') }}" class="neo-btn text-xl w-full md:w-auto text-center">View Work</a>
@@ -60,7 +60,7 @@
         
         {{-- CTA --}}
         <section class="bg-accent border-y-2 border-black py-24 text-center px-4">
-             <h2 class="text-5xl md:text-7xl font-heading font-black mb-8 leading-tight">READY TO START<br>SOMETHING NEW?</h2>
+             <h2 class="text-5xl md:text-7xl font-heading font-black mb-8 leading-tight">READY TO START<br>BUILDING?</h2>
              <a href="{{ route('contact') }}" class="neo-btn text-2xl px-12 py-4 bg-white text-black hover:bg-black hover:text-white">Let's Talk</a>
         </section>
     </div>

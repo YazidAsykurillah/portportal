@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout title="{{ $post->title }}">
     <div class="max-w-4xl mx-auto">
         <header class="mb-12 border-b-4 border-black pb-12 text-center">
             <div class="flex justify-center items-center gap-4 text-sm font-bold uppercase tracking-widest text-gray-500 mb-4">
