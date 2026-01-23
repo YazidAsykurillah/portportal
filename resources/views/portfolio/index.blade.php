@@ -24,7 +24,7 @@
                     @endif
                     
                     <div class="flex-1 flex flex-col">
-                        <h3 class="text-3xl font-heading font-black uppercase mb-3 leading-none group-hover:text-accent transition-colors">
+                        <h3 class="text-1xl font-heading font-black uppercase mb-3 leading-none group-hover:text-accent transition-colors">
                             <a href="{{ route('portfolio.show', $project) }}" class="before:absolute before:inset-0">
                                 {{ $project->title }}
                             </a>
