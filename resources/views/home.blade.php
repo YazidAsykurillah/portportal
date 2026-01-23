@@ -10,7 +10,7 @@
                 </h1>
                 <p class="text-xl md:text-2xl font-sans font-medium max-w-2xl mx-auto mb-12 bg-white border-2 border-black p-4 shadow-neo inline-block md:rotate-1">
                     <!-- I build web applications that refuse to be ignored. Clean code, intuitive interface, and secure. -->
-                    I design and build websites that<br> attract, engage, and convert.
+                    I design and build websites that attract, engage, and convert.
                 </p>
                 <div class="flex flex-col md:flex-row justify-center gap-6">
                     <a href="{{ route('portfolio.index') }}" class="neo-btn text-xl w-full md:w-auto text-center">View Work</a>
@@ -20,7 +20,7 @@
             
             {{-- Decorative Elements --}}
             <div class="absolute top-10 left-10 w-24 h-24 bg-accent border-2 border-black rounded-full mix-blend-multiply opacity-50 animate-bounce"></div>
-            <div class="absolute bottom-10 right-10 w-32 h-32 bg-white border-2 border-black rotate-12 shadow-neo z-0">
+            <div class="relative mx-auto mt-12 md:mt-0 md:absolute md:bottom-10 md:right-10 w-32 h-32 bg-white border-2 border-black rotate-12 shadow-neo z-0">
                  <img src="{{ asset('images/profile_placeholder.png') }}" 
                       alt="Profile" 
                       class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
