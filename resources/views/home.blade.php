@@ -23,7 +23,7 @@
             <div class="relative mx-auto mt-12 md:mt-0 md:absolute md:bottom-10 md:right-10 w-32 h-32 bg-white border-2 border-black md:rotate-12 shadow-neo z-0">
                  <img src="{{ asset('images/profile_placeholder.png') }}" 
                       alt="Profile" 
-                      class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                      class="w-full h-full object-cover md:grayscale md:hover:grayscale-0 transition-all duration-500">
             </div>
         </section>
 
