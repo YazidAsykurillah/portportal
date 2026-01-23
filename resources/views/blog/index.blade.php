@@ -6,33 +6,34 @@
             </h1>
         </header>
 
-        <div class="space-y-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             @foreach($posts as $post)
-                <article class="neo-card group relative hover:bg-black hover:text-white transition-colors duration-300">
-                    <div class="flex flex-col md:flex-row gap-6 md:items-center">
-                        <div class="md:w-1/4 shrink-0">
-                            <time datetime="{{ $post->published_at }}" class="block font-heading font-bold text-4xl leading-none md:text-right group-hover:text-accent">
-                                {{ \Carbon\Carbon::parse($post->published_at)->format('d') }}<br>
-                                <span class="text-lg uppercase text-gray-400 group-hover:text-gray-300">
-                                    {{ \Carbon\Carbon::parse($post->published_at)->format('M Y') }}
-                                </span>
-                            </time>
-                        </div>
+                <article class="neo-card flex flex-col h-full group relative hover:-translate-y-2 transition-transform duration-300">
+                    <div class="border-b-4 border-black p-6 bg-accent flex justify-between items-center">
+                        <time datetime="{{ $post->published_at }}" class="font-heading font-black text-2xl">
+                            {{ \Carbon\Carbon::parse($post->published_at)->format('M d, Y') }}
+                        </time>
+                        <span class="w-3 h-3 bg-black rounded-full animate-pulse"></span>
+                    </div>
+
+                    <div class="p-6 flex flex-col flex-grow bg-white">
+                        <h2 class="text-xl font-heading font-black leading-tight uppercase mb-4 group-hover:text-accent transition-colors break-words">
+                            <a href="{{ route('blog.show', $post) }}" class="before:absolute before:inset-0">
+                                {{ $post->title }}
+                            </a>
+                        </h2>
                         
-                        <div class="md:w-3/4 space-y-3">
-                            <h2 class="text-3xl font-heading font-bold leading-tight uppercase group-hover:text-accent">
-                                <a href="{{ route('blog.show', $post) }}" class="before:absolute before:inset-0">
-                                    {{ $post->title }}
-                                </a>
-                            </h2>
-                            <p class="font-sans font-medium text-gray-600 group-hover:text-gray-300 text-lg">
-                                {{ Str::limit(strip_tags($post->content), 150) }}
-                            </p>
-                            
-                            <div class="flex items-center gap-2 text-sm font-bold uppercase tracking-widest pt-2">
-                                <span class="w-2 h-2 bg-accent rounded-full inline-block"></span>
-                                {{ $post->author->name }}
+                        <p class="font-sans font-medium text-gray-600 mb-6 flex-grow line-clamp-3">
+                            {{ Str::limit(strip_tags($post->content), 120) }}
+                        </p>
+
+                        <div class="flex items-center gap-3 pt-4 border-t-2 border-dashed border-gray-300 mt-auto">
+                            <div class="w-8 h-8 bg-black rounded-full flex items-center justify-center text-white font-bold text-xs uppercase">
+                                {{ substr($post->author->name, 0, 1) }}
                             </div>
+                            <span class="font-bold text-sm uppercase tracking-wider">
+                                {{ $post->author->name }}
+                            </span>
                         </div>
                     </div>
                 </article>

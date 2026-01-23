@@ -20,7 +20,7 @@
         <section>
             <h2 class="text-4xl font-heading font-black mb-8 border-b-4 border-black inline-block">SKILLSET</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                @foreach(['Web App Development', 'Mobile App Development', 'SEO Implementation'] as $skill)
+                @foreach(['Website Design', 'Website Development', 'UI/UX', 'SEO', 'Branding'] as $skill)
                 <div class="neo-card text-center py-4 font-bold uppercase tracking-wider hover:bg-black hover:text-white cursor-default">
                     {{ $skill }}
                 </div>
