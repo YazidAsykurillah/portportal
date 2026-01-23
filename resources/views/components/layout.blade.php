@@ -9,46 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        heading: ['Syne', 'sans-serif'],
-                    },
-                    colors: {
-                        accent: '#c4f934',
-                        black: '#1a1a1a',
-                        white: '#ffffff',
-                    },
-                    boxShadow: {
-                        'neo': '5px 5px 0px 0px #000',
-                        'neo-sm': '3px 3px 0px 0px #000',
-                        'neo-lg': '8px 8px 0px 0px #000',
-                    }
-                }
-            }
-        }
-    </script>
-    <style type="text/tailwindcss">
-        @layer components {
-            .neo-card {
-                @apply border-2 border-black bg-white shadow-neo p-6 transition-transform duration-200 hover:-translate-y-1 hover:translate-x-1;
-            }
-            .neo-btn {
-                @apply inline-block border-2 border-black bg-black text-white px-6 py-3 font-heading font-bold uppercase tracking-wide shadow-neo transition-all hover:bg-accent hover:text-black hover:-translate-y-1 hover:translate-x-1;
-            }
-            .neo-btn-outline {
-                @apply inline-block border-2 border-black bg-transparent text-black px-6 py-3 font-heading font-bold uppercase tracking-wide shadow-neo transition-all hover:bg-black hover:text-white hover:-translate-y-1 hover:translate-x-1;
-            }
-            .neo-input {
-                @apply w-full border-2 border-black bg-white px-4 py-3 font-sans outline-none focus:shadow-neo transition-shadow placeholder:text-gray-500 bg-white text-black;
-            }
-        }
-    </style>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="bg-[#f0f0f0] text-black font-sans antialiased flex flex-col min-h-screen selection:bg-accent selection:text-black overflow-x-hidden">
 
@@ -116,10 +77,9 @@
                     <p class="text-gray-400 font-sans text-sm">&copy; {{ date('Y') }} All rights reserved.</p>
                 </div>
                 <div class="flex justify-end space-x-6">
-                     <!-- Social links placeholder -->
-                     <a href="#" class="text-white hover:text-accent font-bold uppercase font-heading">Twitter</a>
-                     <a href="#" class="text-white hover:text-accent font-bold uppercase font-heading">LinkedIn</a>
-                     <a href="#" class="text-white hover:text-accent font-bold uppercase font-heading">GitHub</a>
+                    <!-- Social links placeholder -->
+                    <a href="#" class="text-white hover:text-accent font-bold uppercase font-heading">LinkedIn</a>
+                    <a href="#" class="text-white hover:text-accent font-bold uppercase font-heading">GitHub</a>
                 </div>
             </div>
         </div>
