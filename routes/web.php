@@ -17,3 +17,8 @@ Route::get('/portfolio/{project:slug}', [PortfolioController::class, 'show'])->n
 
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/blog/{post:slug}', [BlogController::class, 'show'])->name('blog.show');
+
+Route::get('/robots.txt', function () {
+    return response("User-agent: *\nAllow: /\nSitemap: " . url('sitemap.xml'), 200)
+        ->header('Content-Type', 'text/plain');
+});
