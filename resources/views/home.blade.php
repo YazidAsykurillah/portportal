@@ -23,6 +23,8 @@
             <div class="relative mx-auto mt-12 md:mt-0 md:absolute md:bottom-10 md:right-10 w-32 h-32 bg-white border-2 border-black md:rotate-12 md:hover:rotate-0 transition-transform duration-500 shadow-neo z-0">
                  <img src="{{ asset('images/profile_placeholder.png') }}" 
                       alt="Profile" 
+                      fetchpriority="high"
+                      loading="eager"
                       class="w-full h-full object-cover md:grayscale md:hover:grayscale-0 transition-all duration-500">
             </div>
         </section>
@@ -75,11 +77,12 @@
                 <div class="relative">
                      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80" 
                           alt="Workspace" 
+                          loading="lazy"
                           class="w-full h-auto border-4 border-black shadow-neo-lg grayscale hover:grayscale-0 transition-all duration-500">
                 </div>
             </div>
         </section>
-
+        
         {{-- Services Section --}}
         <section class="max-w-7xl mx-auto px-4 py-24 border-t-4 border-black">
             <h2 class="text-4xl md:text-8xl font-heading font-black mb-8 text-center uppercase tracking-tight">
@@ -151,6 +154,7 @@
                                 @if($project->image)
                                     <img src="{{ Storage::url($project->image) }}" 
                                          alt="{{ $project->title }}" 
+                                         loading="lazy"
                                          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                                 @else
                                     <div class="w-full h-full flex items-center justify-center bg-gray-200 text-gray-400">
