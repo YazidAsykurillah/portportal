@@ -8,7 +8,7 @@
             </h1>
             <div class="neo-card bg-accent rotate-[-1deg] mx-auto max-w-2xl transform hover:rotate-0 transition-transform">
                 <p class="text-xl font-bold font-sans">
-                    Hey! I'm a developer who actually enjoys solving complex problems. 
+                    Hey! I'm Yazid Asykurillah, a developer who actually enjoys solving complex problems.
                     I build websites that work as good as they look, no fluff, just clean code and real results.
                 </p>
             </div>
@@ -19,23 +19,23 @@
 
 
 
-        {{-- Skills Grid --}}
+        {{-- Service Grid --}}
         <section>
-            <h2 class="text-4xl font-heading font-black mb-8 border-b-4 border-black inline-block">SKILLSET</h2>
+            <h2 class="text-4xl font-heading font-black mb-8 border-b-4 border-black inline-block">WHAT I CAN DO FOR YOU</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- Website Design -->
                 <div class="neo-card p-6 hover:bg-black hover:text-white transition-colors group">
                     <h3 class="font-heading font-black text-2xl uppercase mb-2">Website Design</h3>
                     <p class="font-sans font-medium text-gray-600 group-hover:text-gray-300">
-                        I design interfaces that don't just look good, they feel right and make sense to your users.
+                        I design websites that don't just look good, they feel premium and conversion oriented.
                     </p>
                 </div>
 
                 <!-- Website Development -->
                 <div class="neo-card p-6 hover:bg-black hover:text-white transition-colors group">
-                    <h3 class="font-heading font-black text-2xl uppercase mb-2">Web Development</h3>
+                    <h3 class="font-heading font-black text-2xl uppercase mb-2">Web App Development</h3>
                     <p class="font-sans font-medium text-gray-600 group-hover:text-gray-300">
-                        Clean, robust code that actually works. No bloat, just performance and scalability.
+                        High performance and scalable web application to run your business smoothly.
                     </p>
                 </div>
 
