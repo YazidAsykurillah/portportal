@@ -6,7 +6,7 @@ use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\SiteController;
 use Illuminate\Support\Facades\Route;
 
-Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store')->middleware('throttle:3,1');
 
 Route::get('/', [SiteController::class, 'home'])->name('home');
 Route::get('/about', [SiteController::class, 'about'])->name('about');

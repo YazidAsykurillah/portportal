@@ -27,6 +27,10 @@
                 <form action="{{ route('contact.store') }}" method="POST" class="space-y-6">
                     @csrf
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div style="display: none;">
+                            <label for="username">Username</label>
+                            <input type="text" name="username" id="username" placeholder="Your username">
+                        </div>
                         <div>
                             <label for="name" class="block font-heading font-bold mb-2 uppercase">Name</label>
                             <input type="text" name="name" id="name" required class="neo-input" placeholder="JOHN DOE">
