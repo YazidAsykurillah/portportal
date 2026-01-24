@@ -18,6 +18,8 @@ class ContactForm
                     ->label('Email address')
                     ->email()
                     ->required(),
+                TextInput::make('phone')
+                    ->tel(),
                 TextInput::make('subject')
                     ->required(),
                 Textarea::make('message')

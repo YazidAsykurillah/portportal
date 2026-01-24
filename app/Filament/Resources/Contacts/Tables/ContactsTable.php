@@ -20,6 +20,8 @@ class ContactsTable
                 TextColumn::make('email')
                     ->label('Email address')
                     ->searchable(),
+                TextColumn::make('phone')
+                    ->searchable(),
                 TextColumn::make('subject')
                     ->searchable(),
                 TextColumn::make('created_at')

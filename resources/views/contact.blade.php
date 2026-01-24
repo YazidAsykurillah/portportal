@@ -40,6 +40,11 @@
                             <input type="email" name="email" id="email" required class="neo-input" placeholder="JOHN@EXAMPLE.COM">
                         </div>
                     </div>
+                    
+                    <div>
+                        <label for="phone" class="block font-heading font-bold mb-2 uppercase">Phone Number (Optional)</label>
+                        <input type="text" name="phone" id="phone" class="neo-input" placeholder="+1 234 567 890">
+                    </div>
 
                     <div>
                         <label for="subject" class="block font-heading font-bold mb-2 uppercase">Subject</label>
