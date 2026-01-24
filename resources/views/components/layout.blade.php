@@ -92,13 +92,27 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div>
-                    <span class="text-4xl font-heading font-black tracking-tighter block mb-2">LET'S WORK<br>TOGETHER.</span>
+                    <span class="text-4xl font-heading font-black tracking-tighter block mb-2">ASYKURILLAH</span>
                     <p class="text-gray-400 font-sans text-sm">&copy; {{ date('Y') }} All rights reserved.</p>
                 </div>
-                <div class="flex justify-end space-x-6">
-                    <!-- Social links placeholder -->
-                    <a href="#" class="text-white hover:text-accent font-bold uppercase font-heading">LinkedIn</a>
-                    <a href="#" class="text-white hover:text-accent font-bold uppercase font-heading">GitHub</a>
+                <div class="flex flex-col items-start md:items-end gap-4">
+                    <a href="mailto:yasykurillah@gmail.com" class="flex items-center gap-3 text-xl md:text-2xl font-heading font-bold text-white hover:text-accent transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-8 md:w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                        yasykurillah@gmail.com
+                    </a>
+                    <a href="tel:+6281291513745" class="flex items-center gap-3 text-xl md:text-2xl font-heading font-bold text-white hover:text-accent transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-8 md:w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                        +62 812 9151 3745
+                    </a>
+                    <div class="flex gap-6 mt-2">
+                        <a href="#" class="text-gray-400 hover:text-accent font-bold uppercase font-heading text-sm tracking-widest">LinkedIn</a>
+                        <a href="#" class="text-gray-400 hover:text-accent font-bold uppercase font-heading text-sm tracking-widest">GitHub</a>
+                        <a href="#" class="text-gray-400 hover:text-accent font-bold uppercase font-heading text-sm tracking-widest">Instagram</a>
+                    </div>
                 </div>
             </div>
         </div>

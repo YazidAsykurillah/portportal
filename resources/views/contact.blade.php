@@ -7,8 +7,31 @@
                 GET IN TOUCH
             </h1>
             <p class="text-xl font-bold font-sans max-w-2xl mx-auto">
-                Have a project in mind? Let's build something awesome together.
+                Got a project in mind or just want to say hi? Choose your preferred way to reach me below.
             </p>
+        </section>
+
+        {{-- Contact Options --}}
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <a href="mailto:yasykurillah@gmail.com" class="group neo-card bg-accent text-white hover:bg-black hover:text-white flex flex-col items-center justify-center p-8 gap-4 text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                <div>
+                    <span class="block font-heading font-black text-2xl mb-1 uppercase">Email Me</span>
+                    <span class="font-sans font-bold text-lg underline decoration-2 underline-offset-4">yasykurillah@gmail.com</span>
+                </div>
+            </a>
+
+            <a href="tel:+6281291513745" class="group neo-card bg-white text-black hover:bg-black hover:text-white flex flex-col items-center justify-center p-8 gap-4 text-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 group-hover:scale-110 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                </svg>
+                <div>
+                    <span class="block font-heading font-black text-2xl mb-1 uppercase">Call Me</span>
+                    <span class="font-sans font-bold text-lg underline decoration-2 underline-offset-4">+62 812 9151 3745</span>
+                </div>
+            </a>
         </section>
 
         {{-- Contact Form --}}

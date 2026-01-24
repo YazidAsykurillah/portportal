@@ -49,7 +49,7 @@
             <!-- Row 3: Decoration -->
              <div class="absolute bottom-0 left-0 w-full -rotate-1 opacity-50 z-0">
                  <div class="whitespace-nowrap font-heading font-black text-[5rem] md:text-[10rem] text-black leading-none opacity-20 select-none">
-                    DEVELOPMENT
+                    DEVELOPER
                  </div>
             </div>
         </div>
@@ -75,8 +75,8 @@
                     </ul>
                 </div>
                 <div class="relative">
-                     <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=1352&q=80" 
-                          alt="Workspace" 
+                     <img src="{{ asset('images/workspace_mouse.png') }}" 
+                          alt="Me working in my workspace" 
                           loading="lazy"
                           class="w-full h-auto border-4 border-black shadow-neo-lg grayscale hover:grayscale-0 transition-all duration-500">
                 </div>
