@@ -32,9 +32,9 @@
         {{-- Marquee / Transition --}}
         <div class="relative w-screen left-1/2 -ml-[50vw] overflow-hidden bg-accent border-y-8 border-black transform -skew-y-3 py-20 md:py-56">
             <!-- Row 1: Left to Right -->
-            <div class="absolute top-0 left-0 w-full rotate-2 opacity-50">
+            <div class="absolute top-0 left-0 w-full -rotate-1 opacity-50">
                  <div class="whitespace-nowrap font-heading font-black text-[5rem] md:text-[10rem] text-black leading-none opacity-20 select-none">
-                    DESIGN
+                    DESIGNER
                  </div>
             </div>
 
@@ -66,7 +66,7 @@
                         </li>
                         <li class="flex items-center gap-3">
                             <span class="w-6 h-6 bg-purple-400 border-2 border-black flex-shrink-0"></span>
-                            Built for speed, not just looks.
+                            I built for speed, not just looks.
                         </li>
                         <li class="flex items-center gap-3">
                             <span class="w-6 h-6 bg-blue-400 border-2 border-black flex-shrink-0"></span>
