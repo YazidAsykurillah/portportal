@@ -21,7 +21,8 @@ class ProjectsTable
                     ->searchable(),
                 ImageColumn::make('images')
                     ->circular()
-                    ->stacked(),
+                    ->stacked()
+                    ->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('url')
                     ->searchable(),
                 TextColumn::make('status')
