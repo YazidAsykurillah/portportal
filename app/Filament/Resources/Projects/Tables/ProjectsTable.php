@@ -20,6 +20,7 @@ class ProjectsTable
                 TextColumn::make('slug')
                     ->searchable(),
                 ImageColumn::make('images')
+                    ->disk('public')
                     ->circular()
                     ->stacked()
                     ->toggleable(isToggledHiddenByDefault: true),
