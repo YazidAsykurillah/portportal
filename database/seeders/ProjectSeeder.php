@@ -51,7 +51,7 @@ class ProjectSeeder extends Seeder
                 'title' => $project['title'],
                 'slug' => Str::slug($project['title']),
                 'description' => $project['description'],
-                'image' => $project['image'],
+                'images' => [$project['image']],
                 'url' => $project['url'],
                 'status' => 'published',
             ]);

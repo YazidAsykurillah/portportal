@@ -20,8 +20,10 @@ class ProjectForm
                 Textarea::make('description')
                     ->default(null)
                     ->columnSpanFull(),
-                FileUpload::make('image')
+                FileUpload::make('images')
                     ->image()
+                    ->multiple()
+                    ->reorderable()
                     ->disk('public')
                     ->directory('projects')
                     ->visibility('public'),

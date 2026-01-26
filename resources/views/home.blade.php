@@ -151,8 +151,8 @@
                         <article class="neo-card h-full flex flex-col p-0 overflow-hidden hover:rotate-1 transition-transform duration-300">
                             {{-- Image --}}
                             <div class="aspect-[4/3] border-b-2 border-black overflow-hidden relative bg-gray-100">
-                                @if($project->image)
-                                    <img src="{{ Storage::url($project->image) }}" 
+                                @if($project->images && count($project->images) > 0)
+                                    <img src="{{ Storage::url($project->images[0]) }}" 
                                          alt="{{ $project->title }}" 
                                          loading="lazy"
                                          class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">

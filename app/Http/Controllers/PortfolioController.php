@@ -33,7 +33,7 @@ class PortfolioController extends Controller
             'meta_description' => $project->meta_description ?? \Illuminate\Support\Str::limit(strip_tags($project->description), 160),
             'og_title' => $project->meta_title ?? $project->title,
             'og_description' => $project->meta_description ?? \Illuminate\Support\Str::limit(strip_tags($project->description), 160),
-            'og_image' => $project->image ?? null,
+            'og_image' => $project->images[0] ?? null,
         ]);
     }
 }

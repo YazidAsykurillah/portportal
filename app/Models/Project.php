@@ -6,5 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {
+    use \Illuminate\Database\Eloquent\Factories\HasFactory;
     protected $guarded = [];
+
+    protected $casts = [
+        'images' => 'array',
+    ];
 }

@@ -30,7 +30,7 @@ class ProjectFactory extends Factory
             'title' => $title,
             'slug' => Str::slug($title),
             'description' => $this->faker->paragraph(),
-            'image' => null, // Will be handled by seeder or specific states
+            'images' => null, // Will be handled by seeder or specific states
             'url' => $this->faker->url(),
             'status' => 'published',
         ];

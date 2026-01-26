@@ -19,7 +19,9 @@ class ProjectsTable
                     ->searchable(),
                 TextColumn::make('slug')
                     ->searchable(),
-                ImageColumn::make('image'),
+                ImageColumn::make('images')
+                    ->circular()
+                    ->stacked(),
                 TextColumn::make('url')
                     ->searchable(),
                 TextColumn::make('status')
