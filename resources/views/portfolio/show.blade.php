@@ -10,12 +10,17 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
             <div class="lg:col-span-8 space-y-8">
                 @if($project->images && count($project->images) > 0)
-                    <div class="space-y-8">
-                        @foreach($project->images as $image)
-                            <div class="border-4 border-black shadow-neo-lg bg-black">
-                                <img class="w-full h-auto block" src="{{ asset('storage/' . $image) }}" alt="{{ $project->title }}">
-                            </div>
-                        @endforeach
+                    <div class="swiper project-swiper">
+                        <div class="swiper-wrapper">
+                            @foreach($project->images as $image)
+                                <div class="swiper-slide">
+                                    <img class="w-full h-auto block" src="{{ asset('storage/' . $image) }}" alt="{{ $project->title }}">
+                                </div>
+                            @endforeach
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
                     </div>
                 @endif
                 

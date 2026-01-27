@@ -16,6 +16,7 @@
     /* Neon Red */
 
     --shadow-neo: 5px 5px 0px 0px #000;
+    --shadow-neo-lg: 8px 8px 0px 0px #000;
     --shadow-neo-sm: 3px 3px 0px 0px #000;
 
     --animate-marquee: marquee 20s linear infinite;
@@ -58,4 +59,23 @@
     .neo-input {
         @apply w-full border-2 border-black bg-white px-4 py-3 font-sans outline-none focus:shadow-neo transition-shadow placeholder:text-gray-500;
     }
+}
+
+/* Swiper Customization */
+.project-swiper {
+    @apply w-full h-auto border-4 border-black shadow-neo-lg bg-black;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    @apply text-black bg-white border-2 border-black w-12 h-12 flex items-center justify-center shadow-neo transition-transform hover:-translate-y-1 hover:translate-x-1;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    @apply text-xl font-bold;
+}
+
+.swiper-pagination-fraction {
+    @apply bottom-4 left-4 text-left w-auto bg-white border-2 border-black px-4 py-2 shadow-neo;
 }
