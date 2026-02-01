@@ -109,9 +109,9 @@
                         +62 812 9151 3745
                     </a>
                     <div class="flex gap-6 mt-2">
-                        <a href="#" class="text-gray-400 hover:text-accent font-bold uppercase font-heading text-sm tracking-widest">LinkedIn</a>
-                        <a href="#" class="text-gray-400 hover:text-accent font-bold uppercase font-heading text-sm tracking-widest">GitHub</a>
-                        <a href="#" class="text-gray-400 hover:text-accent font-bold uppercase font-heading text-sm tracking-widest">Instagram</a>
+                        <a href="https://www.linkedin.com/in/yazid-asykurillah-bb76b9117" class="text-gray-400 hover:text-accent font-bold uppercase font-heading text-sm tracking-widest">LinkedIn</a>
+                        <a href="https://github.com/YazidAsykurillah" class="text-gray-400 hover:text-accent font-bold uppercase font-heading text-sm tracking-widest">GitHub</a>
+                        <a href="https://www.instagram.com/yazidasykurillah" class="text-gray-400 hover:text-accent font-bold uppercase font-heading text-sm tracking-widest">Instagram</a>
                     </div>
                 </div>
             </div>
