@@ -23,7 +23,7 @@ class PostForm
                 TextInput::make('slug')
                     ->required()
                     ->unique(ignoreRecord: true),
-                Textarea::make('content')
+                \Filament\Forms\Components\RichEditor::make('content')
                     ->default(null)
                     ->columnSpanFull(),
                 TextInput::make('meta_title')
