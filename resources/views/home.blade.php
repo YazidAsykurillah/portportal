@@ -10,7 +10,7 @@
                 </h1>
                 <p class="text-xl md:text-2xl font-sans font-medium max-w-2xl mx-auto mb-12 bg-white border-2 border-black p-4 shadow-neo inline-block md:rotate-1">
                     <!-- I build web applications that refuse to be ignored. Clean code, intuitive interface, and secure. -->
-                    I design and build websites that attract, engage, and convert.
+                    Helping your business reach more customers online with strategic web development.
                 </p>
                 <div class="flex flex-col md:flex-row justify-center gap-6">
                     <a href="{{ route('portfolio.index') }}" class="neo-btn text-xl w-full md:w-auto text-center">View Work</a>
