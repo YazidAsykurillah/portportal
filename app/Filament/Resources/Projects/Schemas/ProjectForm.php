@@ -17,7 +17,7 @@ class ProjectForm
                     ->required(),
                 TextInput::make('slug')
                     ->required(),
-                Textarea::make('description')
+                \Filament\Forms\Components\RichEditor::make('description')
                     ->default(null)
                     ->columnSpanFull(),
                 FileUpload::make('images')

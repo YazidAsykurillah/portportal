@@ -25,7 +25,7 @@
                 @endif
                 
                 <div class="prose prose-xl prose-headings:font-heading prose-headings:font-bold prose-headings:uppercase max-w-none font-sans">
-                    {{ $project->description }}
+                    {!! $project->description !!}
                 </div>
             </div>
 

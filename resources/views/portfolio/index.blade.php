@@ -30,7 +30,7 @@
                             </a>
                         </h3>
                         <p class="font-sans font-medium text-gray-600 mb-6 flex-grow">
-                            {{ Str::limit($project->description, 100) }}
+                            {{ Str::limit(strip_tags($project->description), 100) }}
                         </p>
                         
                         <div class="flex justify-between items-end border-t-2 border-black pt-4 mt-auto">

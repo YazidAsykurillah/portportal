@@ -172,7 +172,7 @@
                                 
                                 @if($project->description)
                                     <p class="font-sans text-sm font-medium line-clamp-3 mb-4 flex-grow">
-                                        {{ Str::limit($project->description, 100) }}
+                                        {{ Str::limit(strip_tags($project->description), 100) }}
                                     </p>
                                 @endif
 
